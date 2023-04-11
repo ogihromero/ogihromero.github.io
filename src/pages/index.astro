@@ -2,8 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Moon from "../components/svg/Moon.jsx";
-import { BsFillMoonStarsFill } from "react-icons/bs";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { GithubFilled, LinkedinFilled } from "@ant-design/icons";
 ---
 
 <Layout title="Adriano Romero Portifolio">
@@ -13,10 +12,7 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
         <h1 class="text-xl font-mono">Adriano Romero</h1>
         <ul class="flex items-center">
           <li>
-            <BsFillMoonStarsFill
-              client:load
-              className=" cursor-pointer text-2xl"
-            />
+            <Moon client:load className="bg-white cursor-pointer text-2xl" />
           </li>
           <li>
             <a
@@ -51,10 +47,10 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
       </div>
       <div class="text-5xl flex justify-center gap-16 py-3 text-gray-600">
         <a href="https://www.linkedin.com/in/adriano-romero/"
-          ><AiFillLinkedin /></a
+          ><LinkedinFilled /></a
         >
         <a href="https://github.com/ogihromero">
-          <AiFillGithub />
+          <GithubFilled />
         </a>
       </div>
 
