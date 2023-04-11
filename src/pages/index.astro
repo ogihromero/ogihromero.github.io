@@ -1,81 +1,65 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Moon from "../components/svg/Moon.jsx";
+import { BsFillMoonStarsFill } from "react-icons/bs";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<Layout title="Adriano Romero Portifolio">
+  <main class="bg-white px-10">
+    <section class="min-h-screen">
+      <nav class="py-10 mb-12 flex justify-between">
+        <h1 class="text-xl font-mono">Adriano Romero</h1>
+        <ul class="flex items-center">
+          <li>
+            <!-- <Moon client:load className="bg-white cursor-pointer text-2xl" /> -->
+            <BsFillMoonStarsFill
+              client:load
+              className=" cursor-pointer text-2xl"
+            />
+          </li>
+          <li>
+            <a
+              href="#"
+              class="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+              >Projects</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="text-center p-10">
+        <h2 class="text-5xl py-2 text-teal-600 font-medium">
+          Adriano "Ogih" Romero
+        </h2>
+        <h3 class="text-2xl py-2">Fullstack Developer</h3>
+        <p class="text-md pt-2 leading-8 text-gray-800">
+          Graduated with a passion for software development.
+        </p>
+        <p class="text-md leading-8 text-gray-800">
+          Skilled in Java, Python, PHP, JavaScript and more.
+        </p>
+        <p class="text-md pb-2 leading-8 text-gray-800">
+          Always available for contact.
+        </p>
+      </div>
+      <div class="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+        <a href="https://www.linkedin.com/in/adriano-romero/"
+          ><AiFillLinkedin /></a
+        >
+        <a href="https://github.com/ogihromero">
+          <AiFillGithub />
+        </a>
+      </div>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+      <div></div>
+    </section>
+  </main>
+</Layout>
