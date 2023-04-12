@@ -1,0 +1,91 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Moon from "../components/svg/Moon.jsx";
+import { GithubFilled, LinkedinFilled } from "@ant-design/icons";
+---
+
+<Layout title="Adriano Romero Portifolio">
+  <main class="bg-white px-10">
+    <section class="min-h-screen">
+      <nav class="py-10 mb-12 flex justify-between">
+        <h1 class="text-xl font-mono">Adriano Romero</h1>
+        <ul class="flex items-center">
+          <li>
+            <Moon client:load className="bg-white cursor-pointer text-2xl" />
+          </li>
+          <li>
+            <a
+              href="/"
+              class="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="projects"
+              class="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+              >About</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="pb-10">
+        <h2 class="text-5xl py-2 text-teal-600 font-medium text-center">
+          Projects
+        </h2>
+        <p class="text-md py-2 leading-8 text-gray-800">
+          I have worked on a diverse range of projects, showcasing my skills in
+          Java, Python, PHP, JavaScript, and other technologies. From web
+          applications to APIs, I have hands-on experience in designing,
+          developing, and deploying projects across various domains. These
+          projects demonstrate my passion for coding and problem-solving, and
+          highlight my ability to create innovative solutions that meet client
+          requirements. Here are some examples of my projects that reflect my
+          technical expertise and dedication to delivering high-quality results.
+        </p>
+      </div>
+      <div>
+        <div>
+          <a
+            href="https://github.com/ogihromero/veiculo-crud"
+            class="hover:underline hover:text-teal-600">
+            <h3 class="text-3xl py-1">Veiculo Crud</h3>
+          </a>
+          <p>
+            Vehicle crud with Laravel 9 with Breeze and TailwindCSS, using Sail
+            to run the project in a Docker container.
+          </p>
+        </div>
+        <div>
+          <a
+            href="https://github.com/ogihromero/django-password-test"
+            class="hover:underline hover:text-teal-600">
+            <h3 class="text-3xl py-1">Django Password Test</h3>
+          </a>
+          <p>
+            Rule validator for a password made in Python, using the Framework
+            with Django-ninja.
+          </p>
+        </div>
+        <div>
+          <a
+            href="https://github.com/Iniciativa-PRO/vitrine-mix"
+            class="hover:underline hover:text-teal-600">
+            <h3 class="text-3xl py-1">Vitrine Mix</h3>
+          </a>
+          <p>
+            Service catalog system for multiple stores. I worked on the backend,
+            doing a RestAPI in Django with Django Rest Framework.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
